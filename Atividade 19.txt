@@ -1,0 +1,29 @@
+function calcularIdade(nome, anoNascimento) {
+  const anoAtual = new Date().getFullYear();
+
+  if (isNaN(anoNascimento) || anoNascimento < 1922 || anoNascimento > 2021) {
+    return "Ano de nascimento inválido. Digite um ano entre 1922 e 2021.";
+  }
+
+  const idade = anoAtual - anoNascimento;
+  return `Olá, ${nome}! Você completou ou completará ${idade} anos em 2022.`;
+}
+
+function pedirInformacoes() {
+  let nomeCompleto = prompt("Digite seu nome completo:");
+  let anoNascimento = prompt("Digite seu ano de nascimento (entre 1922 e 2021):");
+
+  while (true) {
+    if (isNaN(anoNascimento) || anoNascimento < 1922 || anoNascimento > 2021) {
+      alert("Ano de nascimento inválido. Digite um ano entre 1922 e 2021.");
+      anoNascimento = prompt("Digite seu ano de nascimento (entre 1922 e 2021):");
+    } else {
+      break;
+    }
+  }
+
+  const mensagem = calcularIdade(nomeCompleto, parseInt(anoNascimento));
+  alert(mensagem);
+}
+
+pedirInformacoes();
