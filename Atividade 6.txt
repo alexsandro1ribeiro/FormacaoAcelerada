@@ -1,0 +1,19 @@
+var nome= prompt("O veículo escolhido é terrestre? ");
+if (nome == "não" || nome == "nao") {
+    console.log("Seu veículo não se encaixa nos exemplos dado");
+    }
+else if (nome == "sim") {
+    var veiculo = prompt("Usa capacete?");
+    if (veiculo == "sim") {
+        console.log("O veículo escolhido foi uma moto");
+    }
+    else if (veiculo == "não" || veiculo == "nao") {
+        var veiculo1 = prompt("Veículo é pesado? ")
+        if (veiculo1 == "não" || veiculo1 == "nao") {
+            console.log("O veículo escolhido foi uma bicicleta");
+        }
+        else if (veiculo1 == "sim") {
+            console.log("O veículo escolhido foi um trator");
+        }
+    }
+}
