@@ -1,0 +1,51 @@
+function votar() {
+  const candidatos = {
+    889: "candidato_X",
+    847: "candidato_Y",
+    515: "candidato_Z",
+    0: "branco",
+  };
+
+  let votos = {
+    candidato_X: 0,
+    candidato_Y: 0,
+    candidato_Z: 0,
+    branco: 0,
+    nulo: 0,
+  };
+
+  while (true) {
+    let voto = prompt(
+      "Digite o número do candidato (889 para candidato_X, 847 para candidato_Y, 515 para candidato_Z, 0 para branco) ou digite 'fim' para encerrar a votação:"
+    );
+
+    if (voto.toLowerCase() === "fim") {
+      break;
+    }
+
+    const numeroVoto = parseInt(voto);
+
+    if (isNaN(numeroVoto)) {
+      alert("Voto inválido. Digite apenas números ou 'fim' para encerrar a votação.");
+      continue;
+    }
+
+    if (numeroVoto in candidatos) {
+      votos[candidatos[numeroVoto]]++;
+    } else {
+      votos.nulo++;
+    }
+  }
+
+  const vencedor = Object.keys(votos).reduce((a, b) => (votos[a] > votos[b] ? a : b));
+
+  alert(`Resultado da eleição:
+  Votos para candidato_X: ${votos.candidato_X}
+  Votos para candidato_Y: ${votos.candidato_Y}
+  Votos para candidato_Z: ${votos.candidato_Z}
+  Votos em branco: ${votos.branco}
+  Votos nulos: ${votos.nulo}
+  Vencedor: ${vencedor}`);
+}
+
+votar();
