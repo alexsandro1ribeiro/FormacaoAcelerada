@@ -1,0 +1,18 @@
+// Criando as listas
+let nomes = ["João", "Maria", "Pedro", "Ana", "Lucas", "Carla", "Mariana", "Rafael", "Julia", "Daniel"];
+let idades = [25, 30, 22, 28, 35, 27, 31, 29, 26, 24];
+let coresFavoritas = ["azul", "vermelho", "verde", "amarelo", "rosa", "preto", "branco", "laranja", "roxo", "cinza"];
+
+// Imprimindo as listas originais
+console.log("Lista de nomes:", nomes);
+console.log("Lista de idades:", idades);
+console.log("Lista de cores favoritas:", coresFavoritas);
+
+// Modificando uma cor e uma idade
+idades[3] = 29; // Alterando a idade da Ana para 29 anos
+coresFavoritas[7] = "azul"; // Alterando a cor favorita do Rafael para azul
+
+// Imprimindo as listas modificadas
+console.log("Lista de nomes (após modificações):", nomes);
+console.log("Lista de idades (após modificações):", idades);
+console.log("Lista de cores favoritas (após modificações):", coresFavoritas);
