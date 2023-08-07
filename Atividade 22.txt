@@ -1,0 +1,13 @@
+let animais = [
+  ["Cachorro", "Bulldog", 3],
+  ["Gato", "Persa", 5],
+  ["Coelho", "Mini Rex", 2],
+  ["Pássaro", "Canário", 1],
+  ["Peixe", "Beta", 1]
+];
+
+console.log("Informações dos animais:");
+for (let i = 0; i < animais.length; i++) {
+  let animal = animais[i];
+  console.log(`Animal ${i + 1}: Nome: ${animal[0]}, Espécie: ${animal[1]}, Idade: ${animal[2]} anos`);
+}
