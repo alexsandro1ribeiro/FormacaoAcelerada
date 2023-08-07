@@ -1,0 +1,31 @@
+function buscaBinaria(array, valor) {
+  let inicio = 0;
+  let fim = array.length - 1;
+
+  while (inicio <= fim) {
+    let meio = Math.floor((inicio + fim) / 2);
+
+    if (array[meio] === valor) {
+      return meio; // Retorna o índice onde o valor foi encontrado
+    } else if (array[meio] < valor) {
+      inicio = meio + 1;
+    } else {
+      fim = meio - 1;
+    }
+  }
+
+  return -1;
+}
+
+let array = [15, 8, 10, 25, 12, 30, 5, 20, 18, 7];
+let valorProcurado = 20;
+
+array.sort((a, b) => a - b);
+
+let indice = buscaBinaria(array, valorProcurado);
+
+if (indice !== -1) {
+  console.log(`O valor ${valorProcurado} foi encontrado no índice ${indice}.`);
+} else {
+  console.log(`O valor ${valorProcurado} não foi encontrado no array.`);
+}
