@@ -1,0 +1,7 @@
+const prompt = require("readline-sync");
+var nota1 = prompt.questionFloat("Digita a primeira nota:");
+var nota2 = prompt.questionFloat("Digita a primeira nota:");
+var nota3 = prompt.questionFloat("Digita a primeira nota:");
+var soma = nota1+nota2+nota3;
+var media = soma/3;
+console.log(media);
