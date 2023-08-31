@@ -1,0 +1,13 @@
+///var nome; strig 
+///var salario; float number
+///var idade; int number
+///var diploma; booleano
+var nome= "Alexsandro";
+var salario = 250.50;
+var idade = 29;
+var diploma = true;
+
+console.log(nome);
+console.log(salario);
+console.log(idade);
+console.log(diploma);
